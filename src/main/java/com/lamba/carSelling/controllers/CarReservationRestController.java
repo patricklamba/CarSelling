@@ -10,13 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/reservations")
+@RequestMapping("/api")
 public class CarReservationRestController {
 
     @Autowired
     CarReservationRepository carReservationRepository;
 
-    @GetMapping
+    @GetMapping("/reservations")
     public List<CarReservation> getCars(){
         return carReservationRepository.findAll();
     }
